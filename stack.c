@@ -2,8 +2,7 @@
 
 char stack[1000] = {'\0'};
 
-int size()
-{
+int size() {
     int i = 0;
     while (stack[i] != '\0') {
         i++;
@@ -11,29 +10,25 @@ int size()
     return i;
 }
 
-char empty()
-{
+char empty() {
     return (stack[0] == '\0');
 }
 
-char top()
-{
+char top() {
     int i = size();
 
     if (empty()) return -1;
     else return stack[i - 1];
 }
 
-void push(char c)
-{
+void push(char c) {
     int i = size(); // i = pierwszy element, ktory nie jest w tablicy
 
     stack[i] = c;
     stack[i + 1] = '\0';
 }
 
-void pop()
-{
+void pop() {
     int i = size();
 
     stack[i - 1] = '\0';
