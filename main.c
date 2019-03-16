@@ -4,8 +4,7 @@
 #include "stack.h"
 #include "markdown.h"
 
-int main(int argc, char const *argv[])
-{
+int main(int argc, char const *argv[]) {
     int index;
     char c, is_quote, is_code, newline;
 
