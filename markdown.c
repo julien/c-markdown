@@ -2,8 +2,7 @@
 #include "stack.h"
 #include "config.h"
 
-int isSingleton(char c, int len)
-{
+int isSingleton(char c, int len) {
     int i;
 
     for (i = 0; i < len; i++) {
@@ -13,8 +12,7 @@ int isSingleton(char c, int len)
     return -1;
 }
 
-void onSingleton(int index)
-{
+void onSingleton(int index) {
     if (top() == singletons[index]) {
         fprintf( output, "</%s>", conv[index] );
         pop();
@@ -24,8 +22,7 @@ void onSingleton(int index)
     }
 }
 
-int onURL()
-{
+int onURL() {
     // return 0 if it's ok;
     // not 0 if what's wrong
 
@@ -85,8 +82,7 @@ int onURL()
     return 0;
 }
 
-int onHeader()
-{
+int onHeader() {
     int i, countHash = 1;
     char c;
 
@@ -114,8 +110,7 @@ int onHeader()
     return 0;
 }
 
-int onHR()
-{
+int onHR() {
     int countDash = 1,
         i;
     char c;
@@ -140,8 +135,7 @@ int onHR()
     return 0;
 }
 
-int onList(char *type)
-{
+int onList(char *type) {
     char c,
          line[1000] = {0};
     int i = 0, end_list = 0, index;
