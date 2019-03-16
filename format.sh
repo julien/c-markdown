@@ -4,7 +4,7 @@ function cfmt {
 		echo "Usage: cfmt <file>"
 	else
 		astyle \
-			--style=kr \
+			--style=java \
 			--lineend=linux \
 			--convert-tabs \
 			--preserve-date \
