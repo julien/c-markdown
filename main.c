@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
 
     if( argc <= 1 )
     {
-        printf("\n %s: Podaj nazwe pliku do parsowania. \n\n", argv[0] );
+        printf("\n %s: Missing file name. \n\n", argv[0] );
         return 1;
     }
 
@@ -27,12 +27,12 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        printf("\n %s: Zapisano wyniki do: %s\n", argv[0], argv[2]);
+        printf("\n %s: Output file: %s\n", argv[0], argv[2]);
     }
 
     if( input == NULL )
     {
-        printf("\n %s: Brak dostepu do %s\n", argv[0], argv[1] );
+        printf("\n %s: Unable to open %s\n", argv[0], argv[1] );
         return 1;
     }
 
